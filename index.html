@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloura Ventures | Strategic Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Login Section -->
+    <section id="login-section" class="active-section">
+        <div class="login-container">
+            <div class="login-box glass-effect">
+                <div class="logo-area">
+                    <h1>Veloura Ventures</h1>
+                    <p>Strategic Technology & Infrastructure</p>
+                </div>
+                <form id="auth-form">
+
+                    <!-- 🔥 SIGNUP EXTRA (hidden initially) -->
+                    <div id="signup-fields" style="display:none;">
+
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" placeholder="First Name">
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastName" placeholder="Last Name">
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="text" id="phone" placeholder="Phone Number">
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-gift"></i>
+                            <input type="text" id="referral" placeholder="Referral Code">
+                        </div>
+
+                    </div>
+
+                    <!-- 🔹 LOGIN FIELDS -->
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" id="email" placeholder="Email or Username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button type="submit" class="btn-primary" id="submitBtn">
+                        Access Portal →
+                    </button>
+
+                    <!-- 🔄 TOGGLE -->
+                    <p class="login-footer">
+                        <span id="toggleText">Don't have an account?</span>
+                        <span id="toggleAuth" style="color:#2563EB; cursor:pointer;">Sign Up</span>
+                    </p>
+
+                    <!-- GOOGLE -->
+                    <button type="button" id="googleLogin" class="btn-primary"
+                        style="margin-top:10px; background:#fff; color:#000;">
+                        <i class="fab fa-google"></i> Login with Google
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Section -->
+    <section id="dashboard-section">
+        <nav class="navbar glass-effect">
+            <div class="nav-logo">Veloura Ventures</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-item active" data-target="about">About</a></li>
+                <!-- Products moved to About -->
+                <li><a href="#subscriptions" class="nav-item" data-target="subscriptions">Subscriptions</a></li>
+                <li><a href="#wallet" class="nav-item" data-target="wallet">Wallet</a></li>
+                <li><a href="#withdraw" class="nav-item" data-target="withdraw">Withdraw</a></li>
+                <li><a href="#" class="nav-item" data-target="membership">Membership</a></li>
+                <li><a href="#contact" class="nav-item" data-target="contact">Contact</a></li>
+                <li><a href="#help" class="nav-item" data-target="help">Help</a></li>
+                <li><a href="#" id="logout-btn" class="nav-item logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <!-- About Section -->
+            <div id="about" class="content-panel active">
+                <div class="hero-content">
+                    <h2>Bridging Tomorrow's Technology <br>with Today's Opportunity</h2>
+                    <p class="lead-text">Veloura Ventures is a premier strategic agency facilitation advanced technology
+                        and critical infrastructure.</p>
+                </div>
+                <!-- Vision & Philosophy -->
+                <div class="grid-2-col" style="margin-bottom: 4rem;">
+                    <div class="card glass-effect">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To be the global bridge between innovation and implementation, connecting world-class
+                            technology manufacturers with the industries that power our future.</p>
+                    </div>
+                    <div class="card glass-effect">
+                        <h3><i class="fas fa-gem"></i> Our Philosophy</h3>
+                        <p>Built on Innovation, Transparency, and Shared Growth. We foster a sustainable ecosystem where
+                            technology providers, clients, and our shareholder community thrive together.</p>
+                    </div>
+                </div>
+
+                <!-- Strategic Focus Areas (Moved from Products) -->
+                <div class="strategic-focus-section">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Strategic Focus Areas</h2>
+                    <div class="grid-2-col">
+                        <div class="card glass-effect product-card">
+                            <div class="product-image-container">
+                                <img src="https://www.shutterstock.com/image-photo/cockpit-futuristic-autonomous-car-260nw-1095831881.jpg"
+                                    alt="AI Automotive Solutions" class="product-img">
+                                <!-- Fallback/Overlay if needed -->
+                            </div>
+                            <h3>AI Automotive Solutions</h3>
+                            <p>Integrating next-gen software for autonomous driving, predictive maintenance, and smart
+                                vehicular connectivity.</p>
+                        </div>
+                        <div class="card glass-effect product-card">
+                            <div class="product-image-container">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRPs0byukiwBrBkp7Wgcd41CaDMa1BDi0pkQ&s"
+                                    alt="Renewable Energy" class="product-img">
+                            </div>
+                            <h3>Renewable Energy</h3>
+                            <p>Facilitating large-scale deployment of high-efficiency solar panel systems and advanced
+                                wind
+                                turbine technologies.</p>
+                        </div>
+                        <div class="card glass-effect product-card">
+                            <div class="product-image-container">
+                                <img src="https://img.freepik.com/free-photo/futuristic-ai-chip-circuit-board_23-2151977487.jpg?semt=ais_hybrid&w=740&q=80"
+                                    alt="AI Sensor Tech" class="product-img">
+                            </div>
+                            <h3>AI Sensor Tech</h3>
+                            <p>Delivering state-of-the-art camera and sensor networks for highly secure traffic
+                                management
+                                and industrial monitoring.</p>
+                        </div>
+                        <div class="card glass-effect product-card">
+                            <div class="product-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E12AQEFeOO6I-ONRQ/article-cover_image-shrink_720_1280/B4EZUohmymHcAI-/0/1740141654640?e=2147483647&v=beta&t=k4Z5kTjDMkqhIGGWqYSkAyE451pKKUTZs60r6FiXatA"
+                                    alt="Industrial AI & Mining" class="product-img">
+                            </div>
+                            <h3>Industrial AI & Mining</h3>
+                            <p>Connecting mining operations with autonomous machinery and AI-optimized extraction
+                                technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscriptions Section -->
+            <div id="subscriptions" class="content-panel">
+                <h2>Buy Subscription</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <!-- Left: Subscription Plan -->
+                    <div class="card glass-effect">
+                        <h3>₹350 Plan</h3>
+                        
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem;"><strong>Quantity:</strong></label>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <button id="decreaseQty" class="btn-primary" style="width: 40px; padding: 0.5rem;">−</button>
+                                <input type="number" id="subscriptionQty" value="1" min="1" style="width: 60px; padding: 0.5rem; text-align: center; border: 1px solid #ddd; border-radius: 8px;">
+                                <button id="increaseQty" class="btn-primary" style="width: 40px; padding: 0.5rem;">+</button>
+                                <span id="totalPrice" style="margin-left: 1rem; font-weight: 600; font-size: 1.1rem;">Total: ₹350</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary" onclick="buySubscription()" style="width: 100%;">Buy Now</button>
+                    </div>
+
+                    <!-- Right: Wallet Balance -->
+                    <div class="card glass-effect">
+                        <h3><i class="fas fa-wallet"></i> Wallet Balance</h3>
+                        <div style="margin-top: 2rem;">
+                            <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 0.5rem;">Available Balance</p>
+                            <h1 id="walletBalanceDisplay" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">₹0</h1>
+                            <div style="padding: 1rem; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                                <p style="font-size: 0.9rem; color: var(--text-color);">Your wallet balance will be deducted when you purchase a subscription.</p>
+                            </div>
+
+                            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(16, 185, 129, 0.12); border-radius: 10px;">
+                                <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 0.4rem;">Subscriptions Bought</p>
+                                <h2 id="subscriptionsBoughtDisplay" style="font-size: 2rem; color: #047857; margin: 0;">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Section -->
+            <div id="model" class="content-panel">
+                <h2>Business & Shareholder Model</h2>
+                <div class="model-layout">
+                    <div class="card glass-effect large-card">
+                        <h3><i class="fas fa-chart-line"></i> Commission-Based Revenue</h3>
+                        <p>Veloura Ventures operates on a highly efficient, asset-light model. We act as the vital
+                            strategic intermediary. Revenue is generated through success fees and commissions on
+                            facilitated transactions, bypassing manufacturing overhead to focus on execution.</p>
+                    </div>
+                    <div class="card glass-effect large-card">
+                        <h3><i class="fas fa-hand-holding-usd"></i> Shareholder Dividends</h3>
+                        <p>A significant portion of operational profit is distributed as dividends. Yields are directly
+                            correlated with transaction volume, ensuring our investors benefit directly from the value
+                            we create together.</p>
+                    </div>
+                    <div class="card glass-effect highlight-card">
+                        <h3><i class="fas fa-users"></i> Referral Incentive Program</h3>
+                        <p><strong>Exclusive to Shareholders:</strong> Earn a <strong>5% Referral Bonus</strong> on the
+                            total capital invested by any new shareholder you introduce. This program rewards loyalty
+                            and fuels our organic network growth.</p>
+                    </div>
+                    <div class="card glass-effect highlight-card">
+                        <h3><i class="fas fa-users"></i> Agent Referral Incentive </h3>
+                        <p><strong>Exclusive to Agents:</strong> Earn a <strong>20% Referral Bonus</strong>
+                            on the total capital invested by any new client you introduce. This program rewards active
+                            agents
+                            and encourages network expansion.</p>
+                    </div>
+                    <div class="card glass-effect highlight-card">
+                        <h3><i class="fas fa-users"></i> client Referral Incentive </h3>
+                        <p><strong>Exclusive to Clients:</strong> Earn a <strong>10% Referral Bonus</strong> on the
+                            total capital
+                            invested by any new client you introduce. This program encourages clients to grow the
+                            network
+                            while earning additional rewards.</p>
+                    </div>
+                </div>
+            </div>
+            <!--wallet section-->
+            <div id="wallet" class="content-panel">
+                <h2>My Wallet</h2>
+                <div class="card glass-effect">
+                    <h3>Current Balance</h3>
+                    <h1 id="walletBalance">₹0</h1>
+                </div>
+
+                <div class="card glass-effect">
+                    <h3>Add Funds</h3>
+                    <input type="number" id="addAmount" placeholder="Enter amount" class="input-field">
+                    <button id="addMoneyBtn" class="btn-primary">Add Money</button>
+                </div>
+
+                <div class="card glass-effect">
+                    <h3>Transaction History</h3>
+                    <ul id="transactionList"></ul>
+                </div>
+            </div>
+            <!--withdraw page-->
+            <div id="withdraw" class="content-panel">
+                <h2>Withdraw Funds</h2>
+                <div class="card glass-effect">
+                    <h3>Available Balance</h3>
+                    <h2 id="withdrawBalance">₹0</h2>
+                    <input type="number" id="withdrawAmount" placeholder="Enter amount" class="input-field">
+                    <button id="withdrawBtn" class="btn-primary">Withdraw</button>
+                    <p id="withdrawMsg"></p>
+                </div>
+            </div>
+            <div id="membership" class="content-panel">
+                <h2>Membership Plans</h2>
+                <div class="grid-2-col">
+                    <!-- PLAN 1 -->
+                    <div class="card glass-effect">
+                        <h3>₹1500 Plan</h3>
+                        <p><strong>Validity:</strong> 2 Months</p>
+                        <ul>
+                            <li>20% profit commission</li>
+                            <li>Applies on referred investments</li>
+                        </ul>
+                        <button class="btn-primary" onclick="buyPlan(1500, 60)">
+                            Buy Plan
+                        </button>
+                    </div>
+                    <!-- PLAN 2 -->
+                    <div class="card glass-effect">
+                        <h3>₹3000 Plan</h3>
+                        <p><strong>Validity:</strong> 6 Months</p>
+                        <ul>
+                            <li>20% profit commission</li>
+                            <li>Network growth opportunity</li>
+                        </ul>
+                        <button class="btn-primary" onclick="buyPlan(3000, 180)">
+                            Buy Plan
+                        </button>
+                    </div>
+                </div>
+                <!-- USER STATUS -->
+                <div class="card glass-effect" style="margin-top:20px;">
+                    <h3>Your Membership</h3>
+                    <p id="membershipStatus">No active membership</p>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <div id="contact" class="content-panel">
+                <h2>Connect With Us</h2>
+                <div class="contact-container glass-effect">
+                    <p>Interested in partnership or investment opportunities? Reach out to our strategic team.</p>
+                    <div class="contact-details">
+                        <div class="trading-actions">
+                            <button class="btn-trade btn-buy">Buy</button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Global Headquarters, Tech District</span>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" class="input-field">
+                        <input type="email" placeholder="Email Address" class="input-field">
+                        <textarea placeholder="Message" class="input-field"></textarea>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Help Section -->
+            <div id="help" class="content-panel">
+                <h2>Help Center – Investment Support</h2>
+                <p class="lead-text">Welcome to our Investment Help Center. We aim to provide a simple and secure
+                    investment experience.</p>
+
+                <div class="help-grid">
+                    <div class="card glass-effect help-topic">
+                        <h3>1. Account & Verification</h3>
+                        <div class="help-qa">
+                            <h4>How do I create an account?</h4>
+                            <p>Click on Register and complete your basic details. Verify your email/mobile using the
+                                OTP.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>2. Adding Funds</h3>
+                        <div class="help-qa">
+                            <h4>How do I add money to my account?</h4>
+                            <ul>
+                                <li>Log in to your dashboard</li>
+                                <li>Click on Add Funds</li>
+                                <li>Choose UPI, Net Banking, or Card</li>
+                                <li>Enter the amount and confirm</li>
+                            </ul>
+                            <p>Funds are usually credited instantly.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>3. Buy Investments</h3>
+                        <div class="help-qa">
+                            <h4>How do I buy an investment?</h4>
+                            <ul>
+                                <li>Log in to your account</li>
+                                <li>Go to the Invest / Buy section</li>
+                                <li>Select the investment product</li>
+                                <li>Enter the amount or quantity</li>
+                                <li>Click Buy and confirm</li>
+                            </ul>
+                            <p>Once completed, the investment will appear in your portfolio.</p>
+                            <h4>Is there a minimum investment amount?</h4>
+                            <p>Yes, the minimum amount depends on the investment product and will be shown before
+                                purchase.</p>
+                            <h4>When will my purchase be confirmed?</h4>
+                            <p>Most purchases are confirmed instantly or within a few minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>4. Sell Investments</h3>
+                        <div class="help-qa">
+                            <h4>How do I sell my investment?</h4>
+                            <ul>
+                                <li>Go to your Portfolio</li>
+                                <li>Select the investment you want to sell</li>
+                                <li>Click Sell</li>
+                                <li>Enter quantity or amount</li>
+                                <li>Confirm the transaction</li>
+                            </ul>
+                            <h4>When will I receive the money after selling?</h4>
+                            <p>The amount is credited to your wallet/bank within 24–72 hours, depending on processing
+                                time.</p>
+                            <h4>Can I sell anytime?</h4>
+                            <p>Yes, unless the product has a lock-in period. Lock-in details will be mentioned at the
+                                time of purchase.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>5. Dividend Help</h3>
+                        <div class="help-qa">
+                            <h4>What is a dividend?</h4>
+                            <p>A dividend is the profit shared with investors based on their investment holdings.</p>
+                            <h4>How are dividends paid?</h4>
+                            <p>Dividends are credited directly to your dividend wallet.</p>
+                            <h4>When are dividends distributed?</h4>
+                            <p>Dividend frequency depends on the investment product (monthly, quarterly, or annually).
+                            </p>
+                            <h4>How can I check my dividend history?</h4>
+                            <p>Go to Dashboard → Earnings / Dividend History to view all credited dividends.</p>
+                            <h4>What if I didn’t receive my dividend?</h4>
+                            <p>If the dividend is not credited within the scheduled period, please contact support with
+                                your investment details.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>6. Withdrawals</h3>
+                        <div class="help-qa">
+                            <h4>How do I withdraw funds?</h4>
+                            <ul>
+                                <li>Go to Withdraw section</li>
+                                <li>Enter the amount</li>
+                                <li>Select your registered bank account</li>
+                                <li>Submit the request</li>
+                            </ul>
+                            <p>Withdrawals are processed within 24–72 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>7. Security & Safety</h3>
+                        <ul>
+                            <li>Your account is protected with OTP and secure encryption</li>
+                            <li>Never share your login or OTP with anyone</li>
+                            <li>Always verify official communication from our platform</li>
+                        </ul>
+                    </div>
+
+                    <div class="card glass-effect help-topic">
+                        <h3>8. Contact Support</h3>
+                        <p>If you need assistance:</p>
+                        <ul>
+                            <li><strong>Email:</strong> support@VELLOURAVENTURES.COM</li>
+                            <li><strong>WhatsApp/Phone:</strong> +91-884762572O</li>
+                            <li><strong>Working Hours:</strong> Monday – Saturday, 9:00 AM to 6:00 PM</li>
+                        </ul>
+                        <p>We typically respond within 24 hours.</p>
+                    </div>
+
+                    <div class="card glass-effect help-topic full-width">
+                        <h3>9. Referral Program Help</h3>
+                        <p>Our Referral Program allows you to earn rewards by inviting others to join and invest on our
+                            platform.</p>
+
+                        <div class="grid-2-col">
+                            <div>
+                                <h4>How the Referral Program Works</h4>
+                                <ul>
+                                    <li>Log in to your account and go to the Referral section.</li>
+                                    <li>Copy your unique referral link or referral code.</li>
+                                    <li>Share the link/code with your friends, family, or contacts.</li>
+                                    <li>When your referred person registers using your link and completes their
+                                        investment, you become eligible for a referral bonus.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Referral Bonus Details</h4>
+                                <ul>
+                                    <li>You will receive 10% of the investment amount made by your referred user.</li>
+                                    <li>The bonus is credited only after the referred user successfully completes their
+                                        investment.</li>
+                                    <li>The referral reward will be added to your wallet/earnings section.</li>
+                                    <li>You can withdraw the bonus as per the platform withdrawal policy.</li>
+                                </ul>
+                                <p><strong>Example:</strong> If your referred user invests ₹10,000, you will receive
+                                    ₹1,000 as a referral bonus.</p>
+                            </div>
+                        </div>
+
+                        <h4>Important Terms</h4>
+                        <ul>
+                            <li>The referred user must sign up using your referral link or code.</li>
+                            <li>Bonus is applicable only on successful and valid investments.</li>
+                            <li>Self-referrals or fake accounts are strictly prohibited.</li>
+                            <li>The company reserves the right to cancel referral rewards in case of suspicious or
+                                fraudulent activity.</li>
+                            <li>Referral bonus policies may be updated or modified at any time.</li>
+                        </ul>
+
+                        <h4>How to Track Your Referrals</h4>
+                        <p>Go to Dashboard → Referral → My Earnings to view total referrals, investments, and bonuses.
+                        </p>
+
+                        <h4>Need Help?</h4>
+                        <p>If your referral bonus is not credited within the expected time, please contact customer
+                            support. We will assist you within 24 hours.</p>
+                    </div>
+
+                    <div class="card glass-effect help-topic full-width">
+                        <h3>10. Risk Disclaimer</h3>
+                        <p>All investments are subject to market risks. Returns and dividends are not guaranteed and may
+                            vary based on market performance. Please read product details carefully before investing.
+                        </p>
+                        <p style="margin-top: 1rem; font-weight: 600; color: var(--primary-color);">Thank you for
+                            investing with us. We are committed to helping you grow your wealth securely.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>Veloura Ventures</h4>
+                    <p>Pioneering the future through strategic technology and infrastructure investments.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#" id="terms-link">Terms & Conditions</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Legal Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Veloura Ventures. All rights reserved.
+            </div>
+        </footer>
+        </main>
+    </section>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close-btn">&times;</span>
+            <h2>Terms & Conditions and Policy</h2>
+            <p>Welcome to our platform. By registering and investing with our company, you agree to the following terms
+                and conditions. Please read them carefully before making any investment.</p>
+            <hr>
+            <h3>1. Investment Risk Disclaimer</h3>
+            <p>All investments made on this platform are subject to market and business risks. The company does not
+                guarantee any fixed returns, profits, or protection of invested capital.</p>
+            <p>By investing, you acknowledge that:</p>
+            <ul>
+                <li>Your investment is made at your own risk.</li>
+                <li>The company will not be responsible for any loss of funds.</li>
+                <li>Past performance or dividend history does not guarantee future returns.</li>
+            </ul>
+            <hr>
+            <h3>2. Dividend Policy</h3>
+            <ul>
+                <li>Dividends will be provided to customers based on their active investments.</li>
+                <li>All new customers are eligible for dividends once they make an investment.</li>
+                <li>Dividend details and updates will be shared with registered users through their email ID.</li>
+                <li>Dividend amounts and frequency may vary depending on business performance.</li>
+                <li>The company reserves the right to modify dividend structure or timing when required.</li>
+            </ul>
+            <hr>
+            <h3>3. Referral Bonus Policy</h3>
+            <p>Our platform offers a referral reward program under the following conditions:</p>
+            <ul>
+                <li>Users will receive 10% referral bonus based on the investment amount made by their referred person.
+                </li>
+                <li>Referral bonus will be eligible only if the referred user maintains their investment for a minimum
+                    of 30 days (1 month).</li>
+                <li>If the referred user withdraws their investment before completing 1 month, no referral bonus will be
+                    provided.</li>
+                <li>Referral bonus will be credited after the 30-day holding period is completed successfully.</li>
+                <li>Self-referrals, fake accounts, or fraudulent activities are strictly prohibited.</li>
+                <li>The company reserves the right to cancel referral benefits in case of suspicious activity.</li>
+            </ul>
+            <hr>
+            <h3>4. Withdrawals</h3>
+            <ul>
+                <li>Users can request withdrawals through their dashboard.</li>
+                <li>Withdrawal processing time is typically 24–72 hours.</li>
+                <li>The company reserves the right to delay or review withdrawals in case of security or verification
+                    concerns.</li>
+            </ul>
+            <hr>
+            <h3>5. User Responsibility</h3>
+            <ul>
+                <li>Users must provide accurate personal and bank details.</li>
+                <li>Users are responsible for maintaining the confidentiality of their login credentials.</li>
+                <li>Any misuse, fraudulent activity, or violation of platform policies may result in account suspension.
+                </li>
+            </ul>
+            <hr>
+            <h3>6. Communication Policy</h3>
+            <ul>
+                <li>All official updates related to investments, dividends, offers, and policy changes will be
+                    communicated via registered email ID or official communication channels.</li>
+                <li>Users are advised to regularly check their email for important updates.</li>
+            </ul>
+            <hr>
+            <h3>7. Policy Changes</h3>
+            <p>The company reserves the right to update, modify, or change these terms and policies at any time without
+                prior notice. Continued use of the platform after updates will be considered as acceptance of the
+                revised terms.</p>
+            <hr>
+            <p>By using our platform, you confirm that you have read, understood, and agreed to all the above terms and
+                conditions.</p>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
